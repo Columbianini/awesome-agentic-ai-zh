@@ -36,3 +36,5 @@ link-report.txt
 # repo-relative paths never match a worktree copy. Previously only in this machine's
 # .git/info/exclude; tracked here so every contributor gets the same protection.
 .claude/worktrees/
+# pixi environments
+.pixi
