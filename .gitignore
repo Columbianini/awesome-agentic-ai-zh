@@ -26,6 +26,7 @@ book/src/
 dist/
 mermaid.min.js
 mermaid-init.js
+myscripts/
 
 
 # Content Health and local catalog diagnostic logs must not be committed.
