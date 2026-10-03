@@ -16,6 +16,9 @@ _build/
 node_modules/
 .ai/
 __pycache__/
+*.sqlite
+*.pckl
+*.db*
 
 # Phase 5 build artifacts (mdBook + PDF)
 book/dist/
