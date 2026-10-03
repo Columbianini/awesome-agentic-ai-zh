@@ -8,17 +8,40 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
-notebook = ">=7.6.2,<8"
-langchain = ">=1.4.2,<2"
+
+[feature.base.dependencies]
+notebook = ">=7.6.3,<8"
 openai = ">=2.53.0,<3"
-python-dotenv = ">=1.2.3,<2"
-langchain-openai = ">=1.6.2,<2"
+python-dotenv = ">=1.2.4,<2"
+langchain-openai = ">=1.6.7,<2"
 langchain-tavily = ">=0.2.18,<0.3"
 
-[pypi-dependencies]
+[feature.base.pypi-dependencies]
+openai = "*"
 langchain-qwq = ">=0.3.5, <0.4"
 pydantic = "*"
 langgraph-checkpoint-sqlite = ">=3.1.1, <4"
-langgraph-cli = { version = ">=0.4.32, <0.5", extras = ["inmem"] }
+langgraph-cli = ">=0.4.32, <0.5"
 fastapi = ">=0.142.2, <0.143"
 alibabacloud-oss-v2 = ">=1.4.0, <2"
+uv = ">=0.12.22, <0.13"
+
+[feature.dev.dependencies]
+
+[feature.dev.pypi-dependencies]
+langchain = { version = "*", extras = ["mcp"] }
+fastmcp = ">=4.0.10, <5"
+
+[feature.default-ext.dependencies]
+
+[feature.default-ext.pypi-dependencies]
+langchain = "*"
+langchain-mcp-adapters = ">=0.3.2, <0.4"
+
+[environments]
+default = ["base", "default-ext"]
+dev = { features = ["base", "dev"], no-default-feature = true }
+
+[pypi-dependencies]
+fastmcp = ">=3.4.7, <4"
+langchain-community = ">=0.4.2, <0.5"
