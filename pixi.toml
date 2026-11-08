@@ -8,6 +8,15 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
+pypdf = ">=6.20.0,<7"
+dashscope = ">=1.25.19,<2"
+langchain-text-splitters = ">=1.1.3,<2"
+langchain-ollama = ">=1.1.0,<2"
+numpy = ">=2.5.4,<3"
+bm25s = ">=0.3.13,<0.4"
+jieba = ">=0.42.1,<0.43"
+pymilvus = ">=3.0.2,<4"
+milvus-lite = ">=3.2.1,<4"
 
 [feature.base.dependencies]
 notebook = ">=7.6.3,<8"
@@ -45,3 +54,6 @@ dev = { features = ["base", "dev"], no-default-feature = true }
 [pypi-dependencies]
 fastmcp = ">=3.4.7, <4"
 langchain-community = ">=0.4.2, <0.5"
+mineru-open-sdk = ">=0.2.5, <0.3"
+langchain-mineru = ">=0.1.3, <0.2"
+pymilvus = { version = "*", extras = ["milvus-lite"] }
